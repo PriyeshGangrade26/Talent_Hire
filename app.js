@@ -26,6 +26,8 @@ mongoose
 
 // Routes
 app.use("/api/post", require("./routes/routes"));
+app.use("/api/info", require("./routes/inforoutes"));
+app.use("/api/review", require("./routes/reviewroutes"));
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(__dirname + "/dist/"));
